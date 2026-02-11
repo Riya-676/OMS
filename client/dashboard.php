@@ -1,20 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Dashboard Content</title>
-<link rel="stylesheet" href="dashboard.css">
-</head>
-<body>
 <?php
 $pageTitle = "Dashboard";
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="../style.css">
+<meta charset="UTF-8">
+<title>Dashboard</title>
+
+<!-- CSS FILES -->
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="dashboard.css">
+
 </head>
 <body>
 
@@ -26,7 +23,7 @@ $pageTitle = "Dashboard";
 
     <!-- PROFILE CARD -->
     <div class="card profile-card">
-      <img src="https://via.placeholder.com/80">
+     
       <div>
         <h3>Riya Vagadiya</h3>
         <p>Trainee</p>
