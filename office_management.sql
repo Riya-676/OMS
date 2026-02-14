@@ -45,13 +45,6 @@ CREATE TABLE task (
 -- =========================
 -- ATTENDANCE TABLE
 -- =========================
-CREATE TABLE attendance (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    client_id INT,
-    date DATE,
-    status VARCHAR(20),
-    FOREIGN KEY (client_id) REFERENCES client(id)
-);
 
 -- =========================
 -- LEAVE REQUEST TABLE
@@ -92,3 +85,23 @@ CREATE TABLE timesheet (
     hours_worked INT,
     work_description TEXT
 );
+ALTER TABLE leave_request 
+ADD duration VARCHAR(50),
+ADD leave_type VARCHAR(50),
+ADD paid VARCHAR(10);
+CREATE TABLE attendance (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    client_id INT,
+    date DATE,
+    check_in TIME NULL,
+    check_out TIME NULL,
+    status VARCHAR(50)
+);
+
+INSERT INTO projects (project_name, description, start_date, end_date, status)
+VALUES
+('Office Management System', 'Complete OMS software development', '2026-02-01', '2026-04-30', 'Active'),
+
+('Website Redesign', 'Company website UI improvement', '2026-01-15', '2026-03-10', 'Active'),
+
+('Employee Portal', 'Internal employee dashboard creation', '2026-02-10', '2026-05-20', 'Pending');

@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Sidebar</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
 <body>
@@ -31,9 +32,9 @@
 
         <ul class="submenu" id="hrMenu">
             <li><a href="leave.php">Leaves</a></li>
-            <li><a href="#">Attendance</a></li>
-            <li><a href="#">Holiday</a></li>
-            <li><a href="#">Appreciation</a></li>
+            <li><a href="attendance.php">Attendance</a></li>
+          
+            <li><a href="appreciation.php">Appreciation</a></li>
         </ul>
     </li>
 
@@ -51,7 +52,7 @@
         </ul>
     </li>
 
-    <li class="menu-item"><a href="#"><i class="fa-solid fa-dollar-sign"></i>Finance</a></li>
+    <!-- <li class="menu-item"><a href="#"><i class="fa-solid fa-dollar-sign"></i>Finance</a></li> -->
     <li class="menu-item"><a href="timesheet.php"><i class="fa-solid fa-calendar"></i>Timesheet</a></li>
   
 </ul>

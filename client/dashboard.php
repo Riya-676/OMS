@@ -18,7 +18,7 @@ $pageTitle = "Dashboard";
 <?php include("../includes/sidebar.php"); ?>
 <div class="dashboard main">
     <?php include("../includes/header.php"); ?>
-
+ 
   <div class="grid content">
 
     <!-- PROFILE CARD -->
