@@ -105,3 +105,16 @@ VALUES
 ('Website Redesign', 'Company website UI improvement', '2026-01-15', '2026-03-10', 'Active'),
 
 ('Employee Portal', 'Internal employee dashboard creation', '2026-02-10', '2026-05-20', 'Pending');
+ALTER TABLE projects
+ADD client_id INT,
+ADD FOREIGN KEY (client_id) REFERENCES client(id);
+INSERT INTO projects 
+(project_name, description, start_date, end_date, status, client_id)
+VALUES
+('Office Management System', 
+ 'Complete OMS software development', 
+ '2026-02-01', 
+ '2026-04-30', 
+ 'Active',
+ 1);
+ALTER TABLE tasks ADD description TEXT;

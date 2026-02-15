@@ -47,7 +47,7 @@
 
         <ul class="submenu" id="workMenu">
             <li><a href="projects.php">Projects</a></li>
-            <li><a href="tasks.php">Tasks</a></li>
+            <li><a href="task.php">Tasks</a></li>
            
         </ul>
     </li>
