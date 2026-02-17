@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Add Employee</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container mt-4">
+  <h3>Add Employee</h3>
+
+  <form>
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label>Employee ID</label>
+        <input type="text" class="form-control" placeholder="EMP001">
+      </div>
+
+      <div class="col-md-6 mb-3">
+        <label>Employee Name</label>
+        <input type="text" class="form-control" placeholder="Enter Name">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label>Email</label>
+        <input type="email" class="form-control" placeholder="example@gmail.com">
+      </div>
+
+      <div class="col-md-6 mb-3">
+        <label>Phone</label>
+        <input type="text" class="form-control" placeholder="9876543210">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label>Department</label>
+        <select class="form-control">
+          <option>Select Department</option>
+          <option>HR</option>
+          <option>IT</option>
+          <option>Marketing</option>
+        </select>
+      </div>
+
+      <div class="col-md-6 mb-3">
+        <label>Designation</label>
+        <input type="text" class="form-control" placeholder="Developer">
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label>Status</label>
+      <select class="form-control">
+        <option>Active</option>
+        <option>Inactive</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save Employee</button>
+    <a href="employee-view.php" class="btn btn-secondary">View Employees</a>
+  </form>
+</div>
+
+</body>
+</html>

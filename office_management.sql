@@ -118,3 +118,54 @@ VALUES
  'Active',
  1);
 ALTER TABLE tasks ADD description TEXT;
+
+
+
+
+--EMPLOYEE TABLE
+CREATE TABLE employees (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100),
+  email VARCHAR(100),
+  department VARCHAR(50),
+  status VARCHAR(20)
+);
+
+--DEPARTMENT TABLE
+CREATE TABLE departments (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  department_name VARCHAR(100),
+  status VARCHAR(20)
+);
+
+-- ATTENDENCE TABLE
+CREATE TABLE attendance (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  employee_id INT,
+  date DATE,
+  status VARCHAR(20)
+);
+
+-- PROJECTS TABLE
+CREATE TABLE projects (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  project_name VARCHAR(100),
+  department VARCHAR(50),
+  start_date DATE,
+  end_date DATE,
+  status VARCHAR(20)
+);
+
+--LEAVES TABLE
+CREATE TABLE leaves (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  employee_name VARCHAR(100),
+  leave_type VARCHAR(50),
+  from_date DATE,
+  to_date DATE,
+  reason TEXT,
+  status VARCHAR(20)
+);
+
+
+

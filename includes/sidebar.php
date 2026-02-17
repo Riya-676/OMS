@@ -53,7 +53,7 @@
     </li>
 
     <!-- <li class="menu-item"><a href="#"><i class="fa-solid fa-dollar-sign"></i>Finance</a></li> -->
-    <li class="menu-item"><a href="timesheet.php"><i class="fa-solid fa-calendar"></i>Timesheet</a></li>
+    <!-- <li class="menu-item"><a href="timesheet.php"><i class="fa-solid fa-calendar"></i>Timesheet</a></li> -->
   
 </ul>
 

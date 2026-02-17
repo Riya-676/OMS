@@ -2,12 +2,12 @@
 include '../db.php';
 session_start();
 
-if(!isset($_SESSION['client_id'])){
-    header("Location: login.php");
-    exit();
-}
+// if(!isset($_SESSION['client_id'])){
+//     header("Location: login.php");
+//     exit();
+// }
 
-$client_id = $_SESSION['client_id'];
+// $client_id = $_SESSION['client_id'];
 
 // Add Task
 if(isset($_POST['add_task'])){

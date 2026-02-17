@@ -1,6 +1,54 @@
 <?php
 $pageTitle = "Dashboard";
 ?>
+<?php
+include '../db.php';
+$pageTitle = "Dashboard";
+
+$client_id = 1; // currently login user id (example)
+$today = date("Y-m-d");
+
+// Pending Tasks Count
+// Overdue Tasks (automatic)
+$pending_query = mysqli_query($conn, "
+    SELECT COUNT(*) as total 
+    FROM tasks 
+    WHERE status != 'Complete'
+    AND due_date >= '$today'
+");
+
+$pending = mysqli_fetch_assoc($pending_query)['total'];
+
+
+
+// Completed Tasks Count
+$completed_query = mysqli_query($conn, "
+    SELECT COUNT(*) as total 
+    FROM tasks 
+    WHERE status = 'Complete'
+");
+
+$completed = mysqli_fetch_assoc($completed_query)['total'];
+// Total Projects Count
+$total_project_query = mysqli_query($conn, "
+    SELECT COUNT(*) as total 
+    FROM projects
+");
+
+$total_projects = mysqli_fetch_assoc($total_project_query)['total'];
+
+
+// Active Projects Count
+$active_project_query = mysqli_query($conn, "
+    SELECT COUNT(*) as total 
+    FROM projects 
+    WHERE status = 'Active'
+");
+
+$active_projects = mysqli_fetch_assoc($active_project_query)['total'];
+
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -35,19 +83,26 @@ $pageTitle = "Dashboard";
     <div class="card">
       <h3>Tasks</h3>
       <div class="stats">
-        <div><span>0</span><p>Pending</p></div>
-        <div><span class="red">0</span><p>Overdue</p></div>
+       <div><span><?php echo $pending; ?></span><p>Pending</p></div>
+       <div><span class="green"><?php echo $completed; ?></span><p>Completed</p></div>
       </div>
     </div>
 
     <!-- PROJECTS -->
-    <div class="card">
-      <h3>Projects</h3>
-      <div class="stats">
-        <div><span>0</span><p>In Progress</p></div>
-        <div><span class="red">0</span><p>Overdue</p></div>
-      </div>
+   <div class="card">
+  <h3>Projects</h3>
+  <div class="stats">
+    <div>
+       <span><?php echo $total_projects; ?></span>
+       <p>Total Projects</p>
     </div>
+
+    <div>
+       <span class="green"><?php echo $active_projects; ?></span>
+       <p>Active</p>
+    </div>
+  </div>
+</div>
 
     <!-- WEEK TIMELOG -->
     <div class="card wide">
